@@ -14,6 +14,7 @@ client.config = config;
 
 const axios = require(`axios`)
 
+const synchronizeSlashCommands = require('discord-sync-commands');
 
 
 /* Load all commands */
@@ -28,6 +29,14 @@ fs.readdir("./commands/", (_err, files) => {
             ...props
         });
         console.log(`👌 Command loaded: ${commandName}`);
+    });
+    synchronizeSlashCommands(client, client.commands.map((c) => ({
+        name: c.name,
+        description: c.description,
+        options: c.options,
+        type: 'CHAT_INPUT'
+    })), {
+        debug: true
     });
 });
 

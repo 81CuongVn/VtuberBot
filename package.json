@@ -1,5 +1,5 @@
 {
-    "name": "giveaway-bot",
+    "name": "vtuberbot",
     "version": "1.0.0",
     "description": "My First Ever Giveaway bot created with discord-giveaways package in javascript.",
     "main": "index.js",
@@ -7,7 +7,7 @@
         "start": "node index.js",
         "dev": "nodemon index.js"
     },
-    "author": "DevMirza",
+    "author": "denki",
     "license": "ISC",
     "keywords": [
         "discord",
