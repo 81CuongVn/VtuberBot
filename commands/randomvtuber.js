@@ -6,7 +6,7 @@ module.exports = {
     name: 'randomvtuber',
     description: 'Random Vtuber Image',
     run: async (client, interaction) => {
-        axios.get('https://vtuberapi.itzdenkivn.repl.co/randomvtuber/?apikey=ZrB2SFzdvSlQ').then((res) => {
+        axios.get('https://vtuber-api-production.up.railway.app/randomvtuber/?apikey=DjisTNQfWctm').then((res) => {
         const embed = new MessageEmbed()
         .setImage(res.data.url)
         .setColor('BLUE')
